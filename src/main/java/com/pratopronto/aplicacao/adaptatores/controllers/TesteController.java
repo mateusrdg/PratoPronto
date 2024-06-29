@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("teste")
 public class TesteController {
 
     private final ClienteServicePort clienteServicePort;
