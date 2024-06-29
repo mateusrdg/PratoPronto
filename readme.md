@@ -23,4 +23,4 @@ docker compose down --rmi all
 ```
 
 ## Colletion para execução de testes:
-na pasta raiz do sistema, pasta colletion.
+na pasta raiz do sistema, pasta colletion..
