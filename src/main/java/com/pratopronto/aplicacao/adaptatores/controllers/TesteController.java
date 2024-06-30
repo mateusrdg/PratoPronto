@@ -23,6 +23,6 @@ public class TesteController {
 
     @GetMapping(value = "/teste")
     String buscarClientePorCpf() throws NotFoundException {
-        return "MAKE THE L";
+        return "CU HJ?";
     }
 }
