@@ -1,8 +1,8 @@
 package com.pratopronto.dominio.portas.interfaces;
 
+import com.pratopronto.aplicacao.adaptatores.controllers.exception.NotFoundException;
 import com.pratopronto.dominio.dtos.pedido.AtualizaPedidoDTO;
 import com.pratopronto.dominio.dtos.pedido.PedidoDTO;
-import javassist.NotFoundException;
 
 import java.util.List;
 import java.util.UUID;

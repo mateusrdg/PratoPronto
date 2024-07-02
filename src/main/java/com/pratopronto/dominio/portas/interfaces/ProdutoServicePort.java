@@ -1,8 +1,8 @@
 package com.pratopronto.dominio.portas.interfaces;
 
+import com.pratopronto.aplicacao.adaptatores.controllers.exception.NotFoundException;
 import com.pratopronto.dominio.dtos.produto.ProdutoDTO;
 import com.pratopronto.dominio.enums.CategoriaEnum;
-import javassist.NotFoundException;
 
 import java.util.List;
 

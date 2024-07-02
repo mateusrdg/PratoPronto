@@ -58,7 +58,7 @@ public class PedidoServiceImp implements PedidoServicePort {
     }
 
     @Override
-    public void atualizaStatus(UUID id, AtualizaPedidoDTO atualizaPedidoDTO) throws javassist.NotFoundException {
+    public void atualizaStatus(UUID id, AtualizaPedidoDTO atualizaPedidoDTO) throws NotFoundException {
         Pedido pedido = validaPedido(id);
         atualizar(pedido, atualizaPedidoDTO);
         this.pedidoRepositoryPort.atualizar(pedido);

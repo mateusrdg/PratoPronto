@@ -1,8 +1,8 @@
 package com.pratopronto.aplicacao.adaptatores.controllers;
 
+import com.pratopronto.aplicacao.adaptatores.controllers.exception.NotFoundException;
 import com.pratopronto.dominio.dtos.cliente.ClienteDTO;
 import com.pratopronto.dominio.portas.interfaces.ClienteServicePort;
-import javassist.NotFoundException;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;

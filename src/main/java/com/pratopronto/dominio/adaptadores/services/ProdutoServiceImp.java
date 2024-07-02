@@ -1,12 +1,12 @@
 package com.pratopronto.dominio.adaptadores.services;
 
 import com.pratopronto.aplicacao.adaptatores.controllers.exception.BadRequestException;
+import com.pratopronto.aplicacao.adaptatores.controllers.exception.NotFoundException;
 import com.pratopronto.dominio.Produto;
 import com.pratopronto.dominio.dtos.produto.ProdutoDTO;
 import com.pratopronto.dominio.enums.CategoriaEnum;
 import com.pratopronto.dominio.portas.interfaces.ProdutoServicePort;
 import com.pratopronto.dominio.portas.repositories.ProdutoRepositoryPort;
-import javassist.NotFoundException;
 
 import java.util.List;
 import java.util.Optional;

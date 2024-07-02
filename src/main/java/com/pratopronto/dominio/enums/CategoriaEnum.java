@@ -1,6 +1,7 @@
 package com.pratopronto.dominio.enums;
 
-import javassist.NotFoundException;
+
+import com.pratopronto.aplicacao.adaptatores.controllers.exception.NotFoundException;
 
 public enum CategoriaEnum {
     LANCHE("lanche"),
