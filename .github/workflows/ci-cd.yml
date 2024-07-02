@@ -23,8 +23,8 @@ jobs:
           SONAR_HOST_URL: ${{ secrets.HOST_SONAR }}
         with:
           args: >
-            -Dsonar.projectKey=prato-pronto
-            -Dsonar.sources=com/pratopronto
+            -Dsonar.organization=my-org
+            -Dsonar.projectKey=my-Java-web-app
 
       # Check the Quality Gate status.
       - name: SonarQube Quality Gate check
