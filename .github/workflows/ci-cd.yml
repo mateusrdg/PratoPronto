@@ -26,6 +26,7 @@ jobs:
             -Dsonar.organization=default-organization
             -Dsonar.sources=./src/main/java
             -Dsonar.projectKey=prato-pronto
+            -Dsonar.java.binaries=target/classes
          #   # -Dsonar.java.jdkHome=/usr/lib/jvm/java-17-temurin
          #   # -Dsonar.java.source=17
 
