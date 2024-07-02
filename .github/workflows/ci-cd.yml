@@ -26,6 +26,11 @@ jobs:
             -Dsonar.organization=default-organization
             -Dsonar.sources=./src/main/java
             -Dsonar.projectKey=prato-pronto
+            -Dsonar.java.jdkHome=/usr/lib/jvm/java-17-temurin
+            -Dsonar.java.source=17
+        run: |
+          export _JAVA_OPTIONS="$_JAVA_OPTIONS --add-opens java.base/java.lang=ALL-UNNAMED"
+          sonar-scanner
       # Check the Quality Gate status.
       - name: SonarQube Quality Gate check
         id: sonarqube-quality-gate-check
