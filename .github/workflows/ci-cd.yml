@@ -23,7 +23,7 @@ jobs:
           SONAR_HOST_URL: ${{ secrets.HOST_SONAR }}
         with:
           args: >
-            -Dsonar.organization=my-org
+            -Dsonar.organization=default-organization
             -Dsonar.sources=./src/main/java
             -Dsonar.projectKey=prato-pronto
       # Check the Quality Gate status.
