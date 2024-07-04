@@ -27,6 +27,7 @@ jobs:
         with:
           args: >
             -Dsonar.projectKey=groupId:artifactId
+            -Dsonar.java.binaries=target
       # Check the Quality Gate status.
       - name: SonarQube Quality Gate check
         id: sonarqube-quality-gate-check
