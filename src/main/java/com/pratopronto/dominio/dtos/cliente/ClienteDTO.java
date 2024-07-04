@@ -10,11 +10,13 @@ public class ClienteDTO {
     @NotNull(message = "O campo 'cpf' não pode ser nulo")
     @NotBlank(message = "O campo 'cpf' não pode estar em branco")
     private String cpf;
+    public ClienteDTO(){
+    }
+
     public ClienteDTO(String nome, String cpf) {
         this.nome = nome;
         this.cpf = cpf;
     }
-
     public String getNome() {
         return nome;
     }
