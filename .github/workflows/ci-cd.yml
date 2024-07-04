@@ -21,14 +21,7 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.TOKEN_SONAR }}
           SONAR_HOST_URL: ${{ secrets.HOST_SONAR }}
-        with:
-          args: >
-            -Dsonar.organization=default-organization
-            -Dsonar.projectKey=prato-pronto
-            -Dsonar.sources=src/main/java
-            -Dsonar.tests=src/test/java
-            -Dsonar.language=java
-            -Dsonar.java.binaries=target
+
       # Check the Quality Gate status.
       - name: SonarQube Quality Gate check
         id: sonarqube-quality-gate-check
