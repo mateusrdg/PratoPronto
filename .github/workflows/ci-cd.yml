@@ -26,8 +26,8 @@ jobs:
             -Dsonar.organization=default-organization
             -Dsonar.projectKey=prato-pronto
             -Dsonar.exclusions=**/*.java
-            -Dsonar.sources= src
-            -Dsonar.tests= test
+            -Dsonar.sources=src/main/java
+            -Dsonar.tests=src/test/java
 
       # Check the Quality Gate status.
       - name: SonarQube Quality Gate check
