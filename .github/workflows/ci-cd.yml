@@ -15,6 +15,9 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
+      - name: Build Project
+        run: mvn clean install
+
       # Triggering SonarQube analysis as results of it are required by Quality Gate check.
       - name: SonarQube Scan
         uses: sonarsource/sonarqube-scan-action@master
@@ -39,9 +42,6 @@ jobs:
 
       - name: "Example show SonarQube Quality Gate Status value"
         run: echo "The Quality Gate status is ${{ steps.sonarqube-quality-gate-check.outputs.quality-gate-status }}"
-
-      - name: Build Project
-        run: mvn clean install -DskipTests
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v3
