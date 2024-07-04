@@ -24,6 +24,6 @@ public class TesteController {
 
     @GetMapping( )
     String buscarClientePorCpf() throws NotFoundException {
-        return "Teste";
+        return "Testee";
     }
 }
