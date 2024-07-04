@@ -51,6 +51,6 @@ class TesteControllerTest {
         mockMvc.perform(get("/testes")
                         .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(content().string("Teste"));
+                .andExpect(content().string("Testee"));
     }
 }
