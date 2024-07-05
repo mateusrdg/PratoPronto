@@ -18,6 +18,14 @@ jobs:
       - name: Build Project
         run: mvn clean install
 
+      - name: Extract groupId
+        id: extract-groupId
+        run: echo "GROUP_ID=$(mvn org.apache.maven.plugins:maven-help-plugin:3.2.0:evaluate -Dexpression=project.groupId -q -DforceStdout)" >> $GITHUB_ENV
+
+      - name: Extract artifactId
+        id: extract-artifactId
+        run: echo "ARTIFACT_ID=$(mvn org.apache.maven.plugins:maven-help-plugin:3.2.0:evaluate -Dexpression=project.artifactId -q -DforceStdout)" >> $GITHUB_ENV
+
       # Triggering SonarQube analysis as results of it are required by Quality Gate check.
       - name: SonarQube Scan
         uses: sonarsource/sonarqube-scan-action@master
@@ -26,8 +34,10 @@ jobs:
           SONAR_HOST_URL: ${{ secrets.HOST_SONAR }}
         with:
           args: >
-            -Dsonar.projectKey=groupId:artifactId
+            -Dsonar.projectKey=${{ env.GROUP_ID }}:${{ env.ARTIFACT_ID }}
             -Dsonar.java.binaries=target
+            -Dsonar.sources=src/main/java
+            -Dsonar.tests=src/test/java
       # Check the Quality Gate status.
       - name: SonarQube Quality Gate check
         id: sonarqube-quality-gate-check
